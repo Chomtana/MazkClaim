@@ -100,7 +100,7 @@ function Mint_Page() {
     blockchain.smartContract.methods.numberMinted(blockchain.account).call()
     .then((numberMinted) => {
       interv2_Bar = setInterval(readAllMinted , 10000);
-      availablemint = 5;
+      availablemint = data.publicSale ? 5 : getAirdropAmount(blockchain.account) - data.mintedCount;
       document.getElementById('mintpage_mint_waiting').style.display = 'flex';
       document.getElementById('mintpage_detail_text').style.display = 'none';
       document.getElementById('mintpage_detail_header').style.display = 'none';
@@ -128,7 +128,6 @@ function Mint_Page() {
   };
 
   const incrementMintAmount = () => {
-    availablemint = 5;
     if(isConnectedAndWhitelisted){
       if(isAmountAvailable){
         let newMintAmount = mintAmount + 1;
@@ -206,12 +205,14 @@ function Mint_Page() {
 
   useEffect(() => {
     console.log(data)
-    if(data){   
+    if(data && data.loaded){   
       if (data.whitelisted) {
         setFeedback('You have been whitelisted');
       } else {
         setFeedback("You aren't whitelisted");        
       }
+
+      getMaxNFTs();
     }
   }, [data]);
 

@@ -21,12 +21,12 @@ function buildTree() {
   return merkleTree;
 }
 
-export function getProof(wallet) {
-  return tree.getHexProof(hashToken(wallet, dropList[wallet]));
+export function getAirdropAmount(wallet) {
+  return dropList[ethers.utils.getAddress(wallet)] || 0;
 }
 
-export function getAirdropAmount(wallet) {
-  return dropList[wallet] || 0;
+export function getProof(wallet) {
+  return tree.getHexProof(hashToken(wallet, getAirdropAmount(wallet)));
 }
 
 tree = buildTree()

@@ -6,6 +6,7 @@ const initialState = {
   mintedCount: 0,
   error: false,
   errorMsg: "",
+  loaded: false,
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -27,6 +28,7 @@ const dataReducer = (state = initialState, action) => {
         cost: action.payload.cost,
         whitelisted: action.payload.whitelisted,
         publicSale: action.payload.publicSale,
+        loaded: action.payload.loaded,
         error: false,
         errorMsg: "",
       };

@@ -22,17 +22,18 @@ const fetchDataFailed = (payload) => {
   };
 };
 
-const PRESALE_PRICE = 0.08;
-const PUBLIC_PRICE = 0.15;
+const PRESALE_PRICE = 0;
+const PUBLIC_PRICE = 0.0005;
 
 export const fetchData = (account) => {
   return async (dispatch) => {
     dispatch(fetchDataRequest());
     try {
-      let totalSupply = await store
-        .getState()
-        .blockchain.smartContract.methods.totalSupply()
-        .call();
+      const totalSupply = 10000;
+      // let totalSupply = await store
+      //   .getState()
+      //   .blockchain.smartContract.methods.totalSupply()
+      //   .call();
       // let cost = await store
       //   .getState()
       //   .blockchain.smartContract.methods.cost()
@@ -44,6 +45,8 @@ export const fetchData = (account) => {
         .call();
 
       let proof = getProof(account);
+
+      console.log(proof)
 
       let mintedCount = await store
         .getState()
@@ -58,6 +61,7 @@ export const fetchData = (account) => {
           publicSale,
           whitelisted: publicSale ? true : proof.length > 0,
           cost: publicSale ? PUBLIC_PRICE : PRESALE_PRICE,
+          loaded: true,
         })
       );
     } catch (err) {
