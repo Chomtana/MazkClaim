@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0xfa3c785b3F9E6140a9D058976D85BBB9bdD704B0",
+  "CONTRACT_ADDRESS": "0x7a817B888A2B3DFEEc425925B1Ff2d1D567a57Ff",
   "SCAN_LINK": "https://etherscan.io/address/0xfa3c785b3f9e6140a9d058976d85bbb9bdd704b0",
   "NETWORK": {
     "NAME": "Mainnet",
     "SYMBOL": "ETH",
-    "ID": 1
+    "ID": 4
   },
   "NFT_NAME": "Mazk Gang",
   "SYMBOL": "MAZK",

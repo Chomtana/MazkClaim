@@ -5,16 +5,16 @@ import dropList from "./whitelist.json";
 
 let tree;
 
-function hashToken(wallet) {
+function hashToken(address, amount) {
   return Buffer.from(
-    ethers.utils.solidityKeccak256(["address"], [wallet]).slice(2),
+    ethers.utils.solidityKeccak256(["address", "uint256"], [address, amount]).slice(2),
     "hex"
   );
 }
 
 function buildTree() {
   let merkleTree = new MerkleTree(
-    dropList.map((drop) => hashToken(drop)),
+    Object.entries(dropList).map((drop) => hashToken(drop[0], drop[1])),
     keccak256,
     { sortPairs: true }
   );
@@ -22,7 +22,11 @@ function buildTree() {
 }
 
 export function getProof(wallet) {
-  return tree.getHexProof(hashToken(wallet));
+  return tree.getHexProof(hashToken(wallet, dropList[wallet]));
+}
+
+export function getAirdropAmount(wallet) {
+  return dropList[wallet] || 0;
 }
 
 tree = buildTree()

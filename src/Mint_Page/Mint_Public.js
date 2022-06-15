@@ -8,7 +8,7 @@ import { connect } from "../redux/blockchain/blockchainActions";
 import { fetchData } from "../redux/data/dataActions";
 import Web3 from "web3";
 import "../Mint_Page/Mint_Page.css"
-import { getProof } from "../merkle/merkleTree";
+import { getAirdropAmount, getProof } from "../merkle/merkleTree";
 import { getAllByPlaceholderText } from "@testing-library/react";
 import { id } from "ethers/lib/utils";
 //import { id } from "ethers/lib/utils";
@@ -21,6 +21,7 @@ var isRecentlyCompleted = false;
 var availablemint = 5;
 var interv2_Bar;
 var contractAD = '0xfa3c785b3F9E6140a9D058976D85BBB9bdD704B0';
+
 function Mint_Page() {
   document.getElementById("root").style.display = ''; 
   document.getElementById("preload").style.display = 'none';  
@@ -68,7 +69,7 @@ function Mint_Page() {
     document.getElementById('mintpage_upbtn').style.pointerEvents = 'none';
     document.getElementById('mintpage_downbtn').style.pointerEvents = 'none';
     blockchain.smartContract.methods
-      [data.publicSale ? 'publicSaleMint' : 'allowlistMint'](mintAmount, ...(data.publicSale ? [] : [data.proof]))
+      [data.publicSale ? 'publicSaleMint' : 'airdropMint'](...(data.publicSale ? [] : [getAirdropAmount(blockchain.account)]), mintAmount, ...(data.publicSale ? [] : [data.proof]))
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
