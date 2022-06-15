@@ -1,0 +1,133 @@
+.bg {
+    /* The image used */
+    background-color: rgb(215, 111, 5);
+    background-image: url('bg1.jpg');
+
+    /* Full height */
+    width: 100%;
+    background-repeat: repeat-x;
+    background-size:contain;
+}
+
+#banner{
+    position: absolute;
+    width: 100%;
+}
+#main_banner{
+    position: relative;
+    width: 100%;
+}
+
+#mazk_logo{
+    width: min(600px , 80%);
+    height: auto;
+}
+#coming_logo{
+    width: min(350px , 50%);
+    height: auto;
+}
+
+/*********************************/
+.storyDiv {
+    /* Full height */
+    position: relative;
+    z-index : 1000;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 100vh;
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    /* Center and scale the image nicely */
+    font-family: 'Space Grotesk', sans-serif;
+    font-family: Montserrat;
+    font-size: 80px;
+    color:white;
+    background-color:transparent;
+}
+
+.storyDiv_left {
+    flex: 50%;
+}
+.storyDiv_right {
+    flex: 50%;
+}
+
+#story_img1{
+    position: relative;
+    float: right;
+    padding-right: 10px;
+    width: min(650px,90%);
+}
+#vision_img {
+    top: 100vh;
+    position: absolute;
+    width: 1px;
+    height: auto;
+    transition: all 0.2s;
+}
+#mission_img {
+    top: 100vh;
+    position: absolute;
+    width: 1px;
+    height: auto;
+    transition: all 0.2s;
+}
+
+#story_img2{
+  float: left;
+  padding-left: 10px;
+  padding-top: 0px;
+  width: min(650px,90%);
+}
+
+#btn_connect_portal2{
+    position: fixed;
+    padding: auto;
+    width: 100vw;
+    background-color: blueviolet;
+}
+@media only screen and (max-width: 1000px) {
+    .bg {
+        background-position-y:top;
+        background-repeat: no-repeat;
+        background-size:auto 25%;  
+    }    
+    .storyDiv{
+        /*top: -130vw;*/
+        padding-top: 190vw;
+    }
+
+    .story-container {
+        overflow-x: hidden;
+        display: block;
+        min-height: 0px;
+    }
+
+    .storyDiv_left {
+        min-width:100%;
+    }
+    .storyDiv_right {
+        min-width:100%;
+        text-align: center;
+    }
+
+    #story_img1{
+        float: none;
+        padding-right: 0px;
+        padding-top: 50vw;
+    }
+    #story_img2{
+        float: none;
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+
+    #vision_img{
+        width: 1px;
+    }
+    #mission_img{
+        width: 1px;
+    }
+}

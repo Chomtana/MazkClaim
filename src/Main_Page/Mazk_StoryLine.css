@@ -1,0 +1,246 @@
+#storyline_main_container{
+  position: fixed;
+  top: -100vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50000001;
+  background-color: rgba(0,0,0,.5);
+  transition: all .6s;
+  overflow:hidden;
+  color: white;
+}
+
+.storyline_main{
+  top: 0px;
+  left: 0px;
+  display: none;
+  flex-wrap: wrap;
+  height: 100%;
+} 
+.storyline_main_img {
+  flex : 50%;
+  max-height: 100vh ;
+  max-width: 50vw ; 
+  padding: auto;
+}
+
+.icon_clan{
+  display: inline-block;
+  height: min(8vh,100px);
+  width: auto;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.storyline_main_img_fp {
+  flex : 40%;
+  max-height: 100vh ;
+  max-width: 40vw ; 
+  padding: auto;
+}
+.stl_main_img {
+  max-width: 100vw;
+  max-height: 100vh;
+  margin-top: 7.5%;
+  margin-bottom: 7.5%;
+  margin-left: calc((50vw - 480px)/2);
+  height: min(83%,1000px);
+  border-radius: 15px;
+}
+.stl_main_img_fp {
+  max-width: 100vw;
+  max-height: 100vh;
+  margin-top: 7%;
+  margin-bottom: 2%;
+  margin-left: calc((50vw - 520px)/2);
+  height: 85vh;
+  border-radius: 15px;
+}
+
+.storyline_detail {
+  padding-top:5%; 
+  padding-left:3%;
+  font-family: 'Krungthep',sans-serif;
+  flex : 50%;
+} 
+.storyline_detail_fp {
+  padding-top:3%; 
+  padding-left: min(140px,50vw);
+  font-family: 'Krungthep',sans-serif;
+  font-size: 1vw;
+  flex:50%;
+} 
+.stl_main_img_fp2 {
+  width: 90%;
+}
+
+.storyline_font1{
+  font-size: min(8vh,100px);
+  line-height: min(9vh,110px);
+}
+.storyline_font2{
+  font-size: min(4vh,40px);
+  line-height: min(4vh,40px);
+}
+.storyline_font3 {
+  font-size: min(2vh,30px);
+  line-height: min(2.6vh,34px);
+  display: block;
+}
+.storyline_font3_fp {
+  /*font-size: max(14px,1vw);*/
+  font-size: min(2vh,30px);
+  line-height: max(16px,1.4vw);
+  display: block;
+}
+.storyline_br1 {
+  line-height: 1px;
+}
+.storyline_br2 {
+  line-height: 1px;
+}
+.storyline_br3{
+  display: none;
+}
+.STLmazk{
+  position: absolute;
+  bottom: 8vh;
+  width: min(41vh,400px);
+  height: auto;
+  left: 60vw;
+  pointer-events: none;
+}
+.Mazk_Story_Header_img{
+  min-width: 16vw;
+  width: 200px;
+}
+#mazk_story_header1{
+  display: inline-block;
+}
+#mazk_story_header2{
+  display: none ;
+}
+.lrbtn {
+  text-align: left;
+  display: table;
+  width: 100%;
+  /* filter: drop-shadow(0 0 15px rgb(62, 23, 1)); */
+}
+
+@media only screen and (max-width: 1000px){
+  .storyline_font3_fp {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .icon_clan{
+    display: inline-block;
+    height: 40px;
+    width: auto;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+  .storyline_font1{
+    font-size: 40px;
+    line-height: 42px;
+  }
+  .storyline_font2{
+    font-size: 20px;
+    line-height: 21px;
+  }
+  .storyline_font3 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .storyline_br2{
+    display: none;
+  }
+  .storyline_br3{
+    display: inline-block;;
+  }
+  .lrbtn {
+    text-align: center;
+  }
+  #storyline_main_container{
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    /*scroll-behavior: smooth;*/
+    top: 0vh;
+    left: 0vw;
+    top: -100vh;
+  }
+  
+  .storyline_main{
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    display: none;
+    height: 100%;
+  } 
+  .storyline_main_img {
+    left: 0px;
+    max-height: none ;
+    max-width: none ;
+    padding: 0;
+  }
+  .storyline_main_img_fp {
+    left: 0px;
+    max-height: none ;
+    max-width: none ; 
+    padding: 0px;
+    margin: 0px;
+  }
+  .storyline_detail_fp {
+    padding-top:3%; 
+    padding-left: 0px;
+    flex:50%;
+  } 
+  .stl_main_img {
+    max-width: 100vw;
+    max-height: 100vh;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    margin-left: 0px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .stl_main_img_fp {
+    width: 95%;
+    height: auto;
+    left: 0px;
+    margin: 0;
+    margin-top: 0px;
+    
+  }
+  .stl_main_img_fp2 {
+    width: 95%;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #mazk_story_header1{
+    display: none;
+  }
+  #mazk_story_header2{
+    display: inline-block ;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .STLmazk{
+    position: relative;
+    bottom: 0;
+    justify-items: center;
+    justify-content:  center;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    left: 0%;
+    padding: 5%;
+    pointer-events: none;
+  }
+} 

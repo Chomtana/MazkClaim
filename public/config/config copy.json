@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x06a11c470a6F4ec36f3db77a1627bFc049dE1F3E",
+  "SCAN_LINK": "https://etherscan.io/address/0x06a11c470a6f4ec36f3db77a1627bfc049de1f3e",
+  "NETWORK": {
+    "NAME": "Rinkeby",
+    "SYMBOL": "ETH",
+    "ID": 4
+  },
+  "NFT_NAME": "Mazk Gang",
+  "SYMBOL": "MAZK",
+  "MAX_SUPPLY": 10000,
+  "WEI_COST": 75000000000000000,
+  "DISPLAY_COST": 0.075,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/nerdy-coder-clones",
+  "SHOW_BACKGROUND": false
+}

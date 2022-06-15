@@ -1,0 +1,276 @@
+#mintpage_container {
+    font-family: 'Krungthep',sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 100%;
+    height : 100vh;
+    max-height: 80vw;
+    background-image : url('mintback.jpg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#mintpage_maindiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#mintpage_sub1 {
+    width : min(100%,125vh);
+    height : 100vh;
+    max-height: 80vw;
+    border-color: brown;
+    border-style: none;
+    border-width: 5px;
+    background-color: transparent;
+    position: relative;
+}
+
+#mintpage_connectwallet_btn { 
+    cursor: pointer;
+    position: absolute;
+    margin-right: 2%;
+    width: 29%;
+    height: 14%;
+    right: 21%;
+    bottom: 30.5%;
+    background-image: url('ConnectWalletBTN.gif');
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    background-position-x: 0%;
+}
+#mintpage_connectwallet_btn:hover { 
+    background-position-x: 100%;
+}
+#mintpage_connectwallet_btn:active { 
+    background-position-x: 50%;
+}
+
+#mintpage_detail_header , #mintpage_checking_whitelist { 
+    font-family: 'Krungthep',sans-serif;
+    font-size: 30px;
+    letter-spacing: 0vw;
+    position: absolute;
+    height: 14%;
+    left: 45%;
+    top: 15.5%;
+    color:white;
+    line-height: 120%;
+    text-align: center;
+    justify-content: center;
+}
+#mintpage_checking_whitelist { 
+    left: 49.5%;
+    top:35.5%;
+    color:white;
+    display: none;
+}
+
+#mintpage_detail_text{ 
+    font-family: 'Krungthep',sans-serif;
+    font-size: 10px;
+    letter-spacing: 0vw;
+    position: absolute;
+    height: 14%;
+    left: 40%;
+    top: 23.5%;
+    color:white;
+    line-height: 120%;
+    user-select:text;
+} 
+
+#mintpage_text_whitelisted , #mintpage_text_unwhitelisted , #mintpage_mint_waiting , #mintpage_full , #mintpage_fail { 
+    display: none;
+    font-family: 'Krungthep',sans-serif;
+    font-size: 10px;
+    letter-spacing: 0vw;
+    position: absolute;
+    height: 14%;
+    left: 36%;
+    top: 24%;
+    color:white;
+    line-height: 120%;
+    user-select:text;
+}#mintpage_text_unwhitelisted {
+    left: 41%;
+}#mintpage_mint_waiting {
+    left:39.5%;
+    top:20%;
+} #mintpage_full {
+    top:30%;
+    left: 35%;
+} #mintpage_fail {
+    top:28%;
+    left: 45%;
+}
+
+#mintpage_downbtn {
+    pointer-events: none;
+    cursor:pointer;
+    position: absolute;
+    width: 9.5%;
+    height: 12%;
+    left: 58%;
+    bottom: 6%;
+    background-image: url('MintPage_DownButton.gif');
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    background-position-x: 0%;
+}
+#mintpage_downbtn:hover {
+    background-position-x: 50%;
+}
+#mintpage_downbtn:active {
+    background-position-x: 100%;
+}
+
+#mintpage_upbtn {
+    pointer-events: none;
+    cursor:pointer;
+    position: absolute;
+    width: 9%;
+    height: 11.5%;
+    left: 58%;
+    bottom: 17.3%;
+    background-image: url('MintPage_UpButton.gif');
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    background-position-x: 0%;
+}
+#mintpage_upbtn:hover {
+    background-position-x: 50%;
+}
+#mintpage_upbtn:active {
+    background-position-x: 100%;
+}
+
+#mintpage_time , #mintpage_ready , #mintpage_opensea {
+    color: white;
+    letter-spacing: -1px;
+    font-family: 'Krungthep',sans-serif;
+    position: absolute;
+    display: none;
+    width: 19%;
+    height: 15.5%;
+    left: 36.5%;
+    top: 74.8%;
+    align-items: center;
+    justify-content: center;
+}
+
+#mintpage_mintbtn {
+    display: none;
+    cursor:pointer;
+    position: absolute;
+    width: 24%;
+    height: 24%;
+    left: 70%;
+    top: 70%;
+    background-image: url('MintPage_claim.gif');
+    background-repeat: no-repeat;
+    background-size: 400% 100%;
+    background-position-x:left;
+} #mintpage_mintbtn:hover {
+    background-position-x: 33.33%;
+} #mintpage_mintbtn:active {
+    background-position-x: 66.67%;
+}
+
+#mintpage_mintbtn_disabled {
+    cursor:auto;
+    position: absolute;
+    width: 24%;
+    height: 24%;
+    left: 70%;
+    top: 70%;
+    background-image: url('MintPage_claim_disabled.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-x:right;
+}
+
+#mintpage_address { 
+    font-family: 'Krungthep',sans-serif;
+    font-size: 20;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-right: 2%;
+    width: 29%;
+    height: 14%;
+    right: 21%;
+    bottom: 30.5%;
+    background-image: url('wallet_blank.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-x: 0%;
+    color: black;
+}
+
+#minted_amount {
+    color: white;
+    letter-spacing: -2px;
+    font-family: 'Krungthep',sans-serif;
+    position: absolute;
+    display: flex;
+    width: 19%;
+    height: 15.5%;
+    right: 79%;
+    top: 74.8%;
+    align-items: center;
+    justify-content: center;
+}
+
+#mintpage_greenbar2 {
+    position: absolute;
+    width: 7%;
+    left:9.7%;
+    bottom:30%;
+    /* clip-path: inset(30% 0% 0% 0%); */
+}
+
+#mintpage_greenbar2_img {
+    width: 100%;
+    height: auto;
+    /* clip-path: inset(100% 0% 0% 0%); */
+    transition: all 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+#mintpage_processing {
+    display: none;
+    width: 50%;
+    height: 40%;
+    font-family: 'Krungthep',sans-serif;
+    font-size:200%;
+    left: 39%;
+    top : 15%;
+    letter-spacing: 0vw;
+    position: absolute;
+    color:white;
+    user-select:text;
+    align-items: center;
+    justify-content: center;
+}
+
+#mintpage_processing_img {
+    width: 50%;
+    height: auto;
+}
+
+#mintpage_success {
+    display: none;
+    width: 50%;
+    height: 40%;
+    left: 39%;
+    top : 15%;
+    position: absolute;
+}

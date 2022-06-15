@@ -1,0 +1,273 @@
+.master_container {
+  /* Full height */
+  position:relative;
+  z-index : 4000;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  
+  width: 100%;
+  display:flex;
+  flex-wrap:wrap;
+  /* Center and scale the image nicely */
+  font-family: 'Space Grotesk', sans-serif;
+  font-family: Montserrat;
+  color:white;
+  background-color: rgb(215,111,6);
+}
+#master_essentialDiv{
+  padding-top: 10vh;
+  background-color: rgb(215,111,5);
+}
+
+.mazter_left {
+  flex: 50%;
+  padding: 10px;
+}
+.mazter_right {
+  flex: 50%;
+  padding: 10px;
+}
+#master_img1{
+  position: relative;
+  top: 0px;
+  float: right;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  width: min(650px,100%);
+  padding-right: 0px;
+}
+
+#master_img2 { 
+  position: relative; 
+  top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  width: min(650px,100%);
+  padding-left: 0px;
+  background-color: #281806;
+  padding-left: 10px;
+}
+
+#mazter_right_subdiv1{
+  position: relative;
+  width: 100%;
+  width: min(650px,100%);
+}
+
+.mazter {
+  position: absolute;
+  margin: 20px;
+  top: 0px;
+  width: 29%;
+  height: 58%;
+  background-color: black;
+  z-index: 400001;
+}
+#mazter1 {
+  clip-path: polygon(0% 0%, 100% 0% , 100% 100% , 0% 100%);
+  background-position: center;
+  background-size: cover;
+  background-image: url('mazter1_1.jpg');
+  transition-timing-function: ease-in;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 2s;
+}
+
+#mazter2 {
+  left:32%;
+  clip-path: polygon(0% 0%, 100% 0% , 100% 100% , 0% 100%);
+  background-position: center;
+  background-size: cover;
+  background-image: url('mazter2_1.jpg');
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 2s;
+}
+
+#mazter3 {
+  left: 64%;
+  clip-path: polygon(0% 0%, 100% 0% , 100% 100% , 0% 100%);
+  background-position: center;
+  background-size: cover;
+  background-image: url('mazter3_1.jpg');
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1) all 2s;
+}
+
+#mazter_right_subdiv2 {
+  position: absolute;
+  top: 60%;
+  z-index: 1000000;
+  margin: 0px;
+  padding: 20px;
+  max-width: 650px;
+}
+
+#mazter_right_subdiv2_table {
+  background-color: #442f1f;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  font-family: 'Krungthep',sans-serif;
+  font-size: min(.8rem, .8vw);
+}
+.team_img{
+  width: 70%;
+}
+
+.mazter_bubble_container{
+  width: 100%;
+  position: absolute;
+  top: -165px;
+  z-index: 2000001;
+}
+
+.mazter_bubble_img{
+  transform: scale(0);
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1) all .4s;
+  width: min(50%,350px);
+  height: auto;
+}
+
+#master_essentialDiv {
+  width: 100%;
+}
+
+#team_img_head {
+  max-width: 32%;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+
+#mazter_aui {
+  transform: scale(0);
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1) all .5s;
+  transition-delay: .1s;
+  position: absolute;
+  top: -100px;
+  width: 25%;
+  left: 5%;
+}
+#mazter_purika {
+  transform: scale(0);
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1) all .5s;
+  transition-delay: .15s;
+  position: absolute;
+  top: -120px;
+  width: 25%;
+  left: 37%;
+}
+#mazter_ply{
+  transform: scale(0);
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1) all .5s;
+  transition-delay: .25s;
+  position: absolute;
+  top: -100px;
+  width: 25%;
+  left: 65%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #master_essentialDiv{
+    width: 90vw;
+    padding-top: 1vw;
+    background-color: rgb(215,111,5);
+  }
+  .mazter_left {
+    padding: 1vw;
+  }
+  .mazter_right {
+    padding: 1vw;
+  }
+  .mazter_bubble_container{
+    width: 100%;
+    position: absolute;
+    top: -16vw;
+    z-index: 2000001;
+  }
+  .mazter_bubble_img{
+    width: min(56vw,350px);
+    height: auto;
+  }
+  .mazter {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 2vw;
+    width: 30%;
+    height: 63vw;
+    background-color: black;
+    z-index: 100001;
+  }
+  #mazter_right_subdiv1{
+    width: 100%;
+    min-width: 100%;
+    float: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  #mazter_right_subdiv2 {
+    max-width:none;
+    top: 176vw;
+    margin: 2.5vw; 
+    padding: 0px;
+    margin-bottom:1vw;
+    padding: 0vw;
+    height: 38vw;
+    background-color: blue;
+  }
+  #mazter_right_subdiv2_table {
+    font-size: 2vw;
+    min-width: 85vw;
+    height: 100%;
+    
+  }
+  #master_img1 , #master_img2 {
+    min-width: 90vw;
+    float: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  #mazter1 {
+    left: 2.5%;
+    clip-path: polygon(0% 0%, 100% 0% , 100% 100% , 0% 100%);
+  }
+  #mazter2 {
+    left: 35.1%;
+    clip-path: polygon(0% 0%, 100% 0% , 100% 100% , 0% 100%);
+  }
+  #mazter3 {
+    left: 67.8%;
+    clip-path: polygon(0% 0%, 100% 0% , 100% 100% , 0% 100%);
+  }
+  
+  #team_img_head{
+    position: absolute;
+    top:-10vw;
+    left: 24vw;
+    max-width: 38vw;
+  }
+  #team_head_td{
+    margin-top: 7vw;
+  }
+  #team_foot_td{
+    margin-top: 0vw;
+  }
+
+  #mazter_aui{
+    width: 19vw;
+    left: 3vw;
+    top: -19.5vw;
+  }
+  #mazter_purika{
+    width: 19vw;
+    left: 33.1vw;
+    top: -24.5vw;
+  }
+  #mazter_ply{
+    width: 19vw;
+    left: 61.1vw;
+    top: -19.5vw;
+  }
+} 

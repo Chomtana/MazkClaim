@@ -1,0 +1,126 @@
+
+#checkpage_container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('checkpage_bg.jpg');
+}
+
+#checkpage_subdiv1 {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: min(60vw,1200px);
+    background-image: url('htc_all.png');
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-size: 300% 100%;
+    font-family: 'Krungthep',sans-serif;
+    font-size: .9vw;
+    line-height: 1.25vw;
+}
+
+#checkpage_backhome_text {
+    font-family: 'Krungthep', serif;
+    font-size: min(4vw,22px);
+    font-weight:lighter;
+  
+    padding: min(1.5vw,14px);
+    border-radius: 1vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    letter-spacing: 1px;
+    margin-right: min(1vw,20px);
+    color: white;
+}
+#checkpage_backhome_text:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+#checkpage_backhome {
+    display: inline-block;
+    position: fixed;
+
+    top: 0px;
+    left: 0px;
+    padding-top: 35px;
+    padding-left: min(3vw,100px);
+    color: white;
+    z-index: 3000000;
+}
+
+#checkpage_presale_date {
+    display: none;
+    position: absolute;
+    bottom: 19%;
+    left: 12%;
+    font-size: 1.5vw;
+    line-height: 1.6vw;
+}
+#checkpage_social {
+    display: none;
+    position: absolute;
+    bottom: 14%;
+    left: 13%;
+    font-size: 1.5vw;
+    line-height: 1.6vw;
+}
+
+#checkpage_subdiv1_1 {
+    height: 70%;
+}
+
+#checkpage_subdiv1_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+}
+
+#checkpage_subdiv1_3 {
+    display:none;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+}
+
+#wallet_blank {
+    padding-top: 4.4%;
+    color: black;
+    font-size: 1.5vw;
+    margin-right: 2%;
+    width: 28%;
+    height: 60.5%;
+    background-image: url('wallet_blank.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-x: 0%;
+}
+
+#checkpage_connectwallet_btn { 
+    margin-right: 2%;
+    width: 28%;
+    height: 60.5%;
+    background-image: url('ConnectWalletBTN.png');
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    background-position-x: 0%;
+}
+#checkpage_connectwallet_btn:hover { 
+    background-position-x: 100%;
+}
+#checkpage_connectwallet_btn:active { 
+    background-position-x: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+    #checkpage_subdiv1 {
+        width: 95vw;
+    }
+
+    #wallet_blank {
+        font-size: 2.2vw;
+    }
+}

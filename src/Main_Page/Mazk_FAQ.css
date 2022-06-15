@@ -1,0 +1,147 @@
+#FAQ_main_container{
+  position: relative;
+  font-family:"Krungthep",sans-serif;
+  font-size: 20px;
+  color: white;
+  background-image: url('FAQ_background.jpg');
+  background-size: contain;
+  background-attachment: fixed;
+}
+#FAQ_main_table{
+  /*background-color: brown;*/
+  width: min(90vw,1250px);
+}
+.FAQ_main_table_header {
+  font-size: min(10vw,65px);
+  padding: 10px;
+  padding-top: 20px;
+}
+.FAQ_main_table_td_question {
+  font-size: min(3vw,30px);
+  padding: 10px;
+}
+.FAQ_main_table_td_answer {
+  padding: 0px;
+  font-size: 0px;
+  background-color:rgb(86, 86, 86);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all .6s;
+}
+.FAQ_main_table_td_end{
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-size: min(2vw,16px);
+  line-height: min(2vw,16px);
+  display: none;
+}
+.FAQ_main_table_td_social_svg{
+  width: 25px;
+  margin: 8px;
+}
+.FAQ_br {
+  display: none;
+}
+.FAQ_questionMark1{
+  display: inline;
+  width: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.FAQ_questionMark2{
+  display: none;
+}
+
+#FAQ_metaDevada{
+  position: absolute;
+  margin: 0px;
+
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 4000002;
+}
+
+#footericon_div{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content:left;
+  font-size: min(2vw,14px);
+  line-height: min(2vw,14px);
+  color: rgba(255,255,255,.6);
+}
+
+#footericon_div_forLandscape{
+  display: inline-block;  
+}
+
+@media only screen and (max-width: 1000px){
+  .FAQ_br {
+    display: inline;
+  }
+  #FAQ_main_container{
+    width: 100%;
+    background-color: brown;
+    background-size:auto;
+  }
+  .FAQ_main_table_header {
+    text-align: center;
+    font-size: min(10vw,65px);
+    padding: 10px;
+    padding-top: 20px;
+  }
+  .FAQ_main_table_td_question {
+    letter-spacing: 0px;
+    text-align: center;
+    font-size: 3.2vw;
+    padding: 1.5vw;
+  }
+  .FAQ_main_table_td_answer {
+    text-align: center;
+    font-size: 0px;
+    padding: 0px;
+    background-color:rgb(86, 86, 86);
+  }
+  .FAQ_main_table_td_end{
+    display: table-cell;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-size: 2.2vw;
+    line-height: min(2vw,16px);
+    filter:opacity(0.5);
+    letter-spacing: .2vw;
+    color:white;
+  }
+  .FAQ_main_table_td_social_svg{
+    text-align: center;
+    width: 35px;
+    margin: 10px;
+  }
+  .FAQ_questionMark1{
+    display: none;
+  }
+  .FAQ_questionMark2{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20vw;
+  }
+  #FAQ_metaDevada_div{
+    position: relative;
+  }
+  #FAQ_metaDevada{
+    position: relative;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #footericon_div_forLandscape{
+    display: none;  
+  }
+
+  #footericon_div{
+    justify-content:center;
+    margin-bottom: 5px;
+  }
+} 

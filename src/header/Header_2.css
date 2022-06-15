@@ -1,0 +1,525 @@
+/*Desktop View*/
+
+#blink_me {
+  animation: blinker 1s forwards infinite;
+}
+@keyframes blinker {
+  99% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.gap{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+#center_div_banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#upmost_left_menu {
+  position: absolute;
+  top: 0px;
+  z-index: 3000000;
+  right: 0px;
+  padding-top: 20px;
+  padding-left: 10vh;
+  color: white;
+  
+}
+#upmost_right_menu {
+  display: inline-block;
+  position: absolute;
+  
+  top: 0px;
+  left: 0px;
+  padding-top: 35px;
+  padding-left: min(3vw,100px);
+  color: white;
+  z-index: 3000000;
+}
+
+.upmost_btn , .upmost_btn2 {
+  font-family: 'Krungthep', serif;
+  font-size: min(1.4vw,22px);
+  font-weight:lighter;
+  transition: all 0.2s;
+
+  padding: min(1.5vw,14px);
+  border-radius: 1vh;
+  background-color: transparent;
+  letter-spacing: 1px;
+  margin-right: min(1vw,20px);
+  color: rgba(255, 255, 255, 0.75)
+}
+.upmost_btn2{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.upmost_btn:hover , .upmost_btn2:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+#wallet_address {
+  float: left;
+  display: none;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Krungthep', serif;
+  font-size: min(1vw,18px);
+  vertical-align: bottom;
+  border: 1px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#upmost_right_menu_mini {
+  display: none;
+  position: fixed;
+  text-align: right;
+  filter: blur(300px);
+  background-image: url("bg_menu_mini.png");
+  background-size:100% 100%;
+  background-position-x: right;
+  height: 100vh;
+  width: 100vw;
+}
+
+.upmost_svg {
+  float: left;
+  height: min(4.5vw,65px);
+  margin-right: min(.5vw,20px);
+  padding: 10px;
+}
+.upmost_svg:hover {
+  float: left;
+  padding: 0px;
+}
+
+.checkWL_social_svg {
+  float: right;
+  height: min(4.5vw,65px);
+  margin-right: min(.5vw,20px);
+  padding: 4px;
+}
+.checkWL_social_svg :hover {
+  float: right;
+  padding: 10px;
+}
+
+.header_menu{
+  top: 0px;
+  width: 100%;
+  position:relative;
+  z-index: 3000000;
+  color: white;
+}
+.header {
+  width: 100%;
+  background-color: transparent;
+  padding: 0px 40px;
+  height: 0px;
+}
+#main_logo{
+  padding-top: 110px;
+  height: 48vh;
+  margin-bottom: 0vw;
+}
+
+.logo_icon{
+  position: fixed;
+  top:0px;
+  height: 65px;
+  width: auto;
+  filter: drop-shadow(0 0 40px black);
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+.nav-options {   
+  width: 100%;
+  padding-left: 25px;
+  display:grid;
+  grid-template-columns: 90px 80px 150px;
+  list-style-type: none;
+  display: none;
+}
+  
+.mobile-option {
+  display: none;
+}
+  
+.option :hover {
+  color: white;
+}
+
+.signin-up {
+  width: auto;
+  display: flex;
+  text-align: right;
+  padding: 0px 5px;
+  list-style-type: none;
+}
+
+.sign-in {
+  width: auto;
+  padding-right: 50px;
+  right: 0px;
+  align-self: right;
+}
+
+.sign-in :hover {
+  color: white;
+}
+.sign-up{
+  position: relative;
+  right: 0px;
+  width: 100%;
+}
+
+.signup-btn {
+  padding: 10px 10px;
+  height: 2.4rem;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+}
+
+#bt1{
+  width: min(15vw,310px); 
+  margin: 0px;
+  padding: 0px;
+  /*height: 10vh;
+  pointer-events: auto; */
+}
+#bt1:hover{
+  content: url('checkbutton_hover.png');
+  /*transition: all .5s ;*/
+}
+#bt1:active{
+  content: url('checkbutton_press.png');
+  /*transition: all .5s ;*/
+}
+
+.connect_button1 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 14px; 
+  color: rgb(255, 255, 255);
+
+  cursor: pointer;
+  align-items: center;
+  background-color:rgba(0, 0, 0, 0.5);
+  border-radius:28px;
+  margin-top:auto;
+  margin-bottom: auto;
+  padding:10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.connect_button1:hover {
+    background-color:#bbff00;
+    color: #000;
+}
+
+.connect_button1:active {
+    position:relative;
+    top:1px;
+}
+  
+.mobile-menu {
+  display: none;
+}
+
+.menu-icon {
+  width: 7vh;
+  height: 7vh;
+  z-index: 10000;
+  position: relative;
+}
+#mazk_story_btn{
+  display: none;
+}
+#gomint_btn  {
+  width: 285px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  background-size:300% 100%;
+  background-position: 0%;
+  background-image: url('GoClaim_btn.png');
+}
+#gomint_btn:hover {
+  background-position: 50%;
+}
+#gomint_btn:active {
+  background-position: 100%;
+}
+
+#gomint_wl , #gomint_maintenance {
+  cursor: pointer;
+  width: 300px;
+  font-family: 'Krungthep',sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: -1px;
+  color: rgb(255, 255, 255);
+  border-radius: 25px;
+  filter: drop-shadow(0px 0px 15px rgba(23, 21, 28,.5));
+  background-color: #d73c03;
+  padding: 14px;
+}
+#gomint_maintenance{
+  width: 600px;
+  filter: drop-shadow(0px 0px 15px rgba(255, 157, 0,1));
+  font-size: 25px;
+  position: absolute;
+  top :88vh;
+  left: calc((100vw - 600px)/2);
+  background-color: #b13500;
+}
+#goto_mintpres { 
+  display: none;
+  transform: scale(0.85,0.85) translate(0px,10vh);
+}
+#waitfor_mintpres {
+  font-family: 'Krungthep',sans-serif;
+  font-size: 47px;
+  line-height: 17px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 285px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  
+  background-image: url('mint_btn_back.png');
+  background-size:100% 100%;
+  position: relative;
+  transform: scale(.95);
+}
+#waitfor_mintpres_inner {
+  position: absolute;
+  left: 19.5%;
+}
+#gocheckdiv {
+  cursor: pointer;
+  width: 15vw;
+  height: 5.3vw;
+  background-image: url('gocheckbutton.png');
+  background-size: 300% 100%;
+  background-position-x: 50%;
+} #gocheckdiv:hover {
+  background-position-x: 0%;
+} #gocheckdiv:active {
+  background-position-x: 100%;
+}
+
+@media (max-width: 1000px) {
+  /*Mobile View */
+  #upmost_right_menu {
+    display:none;
+    left: 15vw;
+  }
+  #upmost_left_menu {
+    position: absolute;
+    top : 220vw;
+    left: 30vw;
+    width: auto;
+    padding: 0px;
+    margin: 0px;
+    /*background-color: #960f25;*/
+  }
+  #upmost_right_menu_mini {
+    display: block;
+    right: -300vw;
+  }
+  .upmost_btn_mini{
+    font-family: 'Krungthep', serif;
+    font-size: 3.5vh;
+    line-height: 10vh;
+    padding: 1vw;
+    border-radius: 1vh;
+    margin-right: 2vw;
+    color: white;
+  }
+
+  .upmost_svg{
+    padding: 0px;
+    width:8vw;
+    float: left;
+    height: 8vw;
+    margin: 0;
+    margin-left : 4.5vw;
+  }
+
+  .header {
+    padding: 0px 0px;
+  }
+
+  .logo_icon{
+    height: 45px;
+    width: auto;
+  }
+
+  .nav-options {
+    z-index: 10;
+    top: 50px;
+    background:transparent;
+    display: flex;
+    position: absolute;
+    left: -100px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style-type: none;
+    grid-gap: 0px;
+  }
+
+  .nav-options.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    align-content: center;
+  }
+
+  .list_menu{
+    height: 200%;
+    width: 100%;
+    padding-left: 0px;
+    border-radius: 40px ;
+    background-color: white;
+    padding: 10px;
+  }
+  .mobile_b1{
+    font-family: 'Cinzel Decorative', cursive;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    padding: 30px 0px;
+  }
+
+  #main_logo{
+    padding-top: 20vw;
+    height: 73vw;
+    margin-bottom: 20vw;
+  }
+  /*
+  .sign-up {
+    background: rgb(0, 0, 0);
+    border-radius: 3px;
+    color: white;
+    padding: 20px 0px;
+    width: 80%;
+    align-self: center;
+    border-radius: 3px;
+  }*/
+
+  #bt1 , #bt1:not(.nohover):hover  {
+    width: 65vw;
+    height: auto;
+    margin-top: 90vw;
+  }
+  a , br {
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+    line-height: 0px;
+  }
+  #mazk_story_btn {
+    position: absolute;
+    left: 30vw;
+    top:200vw;
+    display: inline-block;
+    width: 40vw;
+  }
+
+  .mobile-menu {
+    display: inline-block;
+    top:15px;
+    left: 15px;
+    position: fixed;
+  } 
+
+  #gomint_btn {
+    width: 180px;
+    height: 200px;
+  }
+  #gomint_wl {
+    color: #000;
+    background-color: #f5ce85;
+    filter: none;
+    cursor: pointer;
+    width: 170px;
+    font-family: 'Krungthep',sans-serif;
+    font-size: 17px;
+  }
+  #gomint_maintenance {
+    position: absolute;
+    cursor: pointer;
+    width: 90%;
+    font-family: 'Krungthep',sans-serif;
+    font-size: 18px;
+    filter: none;
+    line-height: 20px;
+    margin: 5%;
+    left: 0px;
+    top:90vh;
+  }
+  #waitfor_mintpres {
+    scale: .7;
+    translate: 0px 18vh;
+  }
+  #goto_mintpres { 
+    transform: scale(0.85,0.85) translate(0px,36vh);
+  }
+  #gocheckdiv {
+    translate: 0px 30vh;
+    cursor: pointer;
+    width: 50vw;
+    height: 18vw;
+    background-position-x: 50%;
+  } #gocheckdiv:hover {
+    background-position-x: 0%;
+  } #gocheckdiv:active {
+    background-position-x: 100%;
+  }
+}
