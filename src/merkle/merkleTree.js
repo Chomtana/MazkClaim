@@ -22,7 +22,7 @@ function buildTree() {
 }
 
 export function getAirdropAmount(wallet) {
-  return dropList[ethers.utils.getAddress(wallet)] || 0;
+  return dropList[wallet.toLowerCase()] || 0;
 }
 
 export function getProof(wallet) {
@@ -32,4 +32,5 @@ export function getProof(wallet) {
 tree = buildTree()
 console.log(tree.getHexRoot());
 console.log(tree.toString());
-// console.log(getProof('0x7c9c773E41a3b68924B3b4924df8FFFcF7Ae7e18'))
+// console.log(getAirdropAmount("0x00000017e52aa80d1Aeb3fFB4a5b21F58Eaeb5b0"))
+// console.log(getProof('0x00000017e52aa80d1Aeb3fFB4a5b21F58Eaeb5b0'))
