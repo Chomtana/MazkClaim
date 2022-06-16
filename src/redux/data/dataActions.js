@@ -23,7 +23,7 @@ const fetchDataFailed = (payload) => {
 };
 
 const PRESALE_PRICE = 0;
-const PUBLIC_PRICE = 0.0005;
+const PUBLIC_PRICE = 0.05;
 
 export const fetchData = (account) => {
   return async (dispatch) => {
