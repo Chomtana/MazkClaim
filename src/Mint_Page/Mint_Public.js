@@ -100,7 +100,7 @@ function Mint_Page() {
     blockchain.smartContract.methods.numberMinted(blockchain.account).call()
     .then((numberMinted) => {
       interv2_Bar = setInterval(readAllMinted , 10000);
-      availablemint = data.publicSale ? 5 : getAirdropAmount(blockchain.account) - data.mintedCount;
+      availablemint = Math.min(100, data.publicSale ? 5 : getAirdropAmount(blockchain.account) - data.mintedCount);
       document.getElementById('mintpage_mint_waiting').style.display = 'flex';
       document.getElementById('mintpage_detail_text').style.display = 'none';
       document.getElementById('mintpage_detail_header').style.display = 'none';
@@ -108,7 +108,7 @@ function Mint_Page() {
       document.getElementById('mintpage_ready').style.fontSize = document.getElementById('mintpage_sub1').offsetWidth/12 + 'px';
       document.getElementById('mintpage_ready').innerHTML = availablemint;
       isAmountAvailable = true;
-      setMintAmount(Math.min(availablemint, 100));
+      setMintAmount(availablemint);
     });
   };
 
