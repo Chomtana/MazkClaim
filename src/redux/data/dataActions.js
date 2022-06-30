@@ -44,6 +44,8 @@ export const fetchData = (account) => {
         .blockchain.smartContract.methods.isPublicSaleOn()
         .call();
 
+      publicSale = false;
+
       let proof = getProof(account);
 
       console.log(proof)
@@ -58,7 +60,7 @@ export const fetchData = (account) => {
           totalSupply,
           proof,
           mintedCount,
-          publicSale: false,
+          publicSale,
           whitelisted: publicSale ? true : proof.length > 0,
           cost: publicSale ? PUBLIC_PRICE : PRESALE_PRICE,
           loaded: true,
