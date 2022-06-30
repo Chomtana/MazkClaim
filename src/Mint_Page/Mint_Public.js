@@ -108,7 +108,7 @@ function Mint_Page() {
       document.getElementById('mintpage_ready').style.fontSize = document.getElementById('mintpage_sub1').offsetWidth/12 + 'px';
       document.getElementById('mintpage_ready').innerHTML = availablemint;
       isAmountAvailable = true;
-      setMintAmount(availablemint);
+      setMintAmount(Math.min(availablemint, 100));
     });
   };
 
