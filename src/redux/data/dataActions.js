@@ -58,7 +58,7 @@ export const fetchData = (account) => {
           totalSupply,
           proof,
           mintedCount,
-          publicSale,
+          publicSale: false,
           whitelisted: publicSale ? true : proof.length > 0,
           cost: publicSale ? PUBLIC_PRICE : PRESALE_PRICE,
           loaded: true,
